@@ -16,5 +16,6 @@ namespace Application.Web.Areas.Common.Controllers
         {
             return View();
         }
+        public 
     }
 }

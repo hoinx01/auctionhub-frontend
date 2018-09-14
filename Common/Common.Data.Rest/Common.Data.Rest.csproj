@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Caller\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\SrvCornet\SrvCornet.Core\SrvCornet.Core.csproj" />
+    <ProjectReference Include="..\..\SrvCornet\SrvCornet.Dal.Rest\SrvCornet.Dal.Rest.csproj" />
+  </ItemGroup>
+
+</Project>
