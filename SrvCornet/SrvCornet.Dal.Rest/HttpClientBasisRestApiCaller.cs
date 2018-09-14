@@ -45,7 +45,7 @@ namespace SrvCornet.Dal.Rest
         {
             if (obj == null)
                 return;
-            request.Content = new StringContent(SerializeObject(obj), Encoding.UTF8);
+            request.Content = new StringContent(SerializeObject(obj), Encoding.UTF8, "application/json");
         }
 
         protected abstract string SerializeObject(object obj);
@@ -58,7 +58,9 @@ namespace SrvCornet.Dal.Rest
         }
         private HttpRequestMessage InitRequest(HttpMethod method, string path, Dictionary<string, string> queries)
         {
-            var requestUri = QueryHelpers.AddQueryString(path, queries);
+            string requestUri = path;
+            if (queries != null)
+                requestUri = QueryHelpers.AddQueryString(path, queries);
             HttpRequestMessage request = new HttpRequestMessage(method, requestUri);
             return request;
         }

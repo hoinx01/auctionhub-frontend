@@ -1,4 +1,4 @@
-﻿
+﻿@model Application.Web.Areas.Common.Models.Account.LoginViewModel
 @{
     Layout = null;
 }
@@ -11,19 +11,39 @@
     <title>Login</title>
 </head>
 <body>
-    <div>
-        <div id="username">
-            <label>Username</label>
-            <input type="text"/>
+    @*<div>
+            <div id="username">
+                <label>Username</label>
+                <input type="text"/>
+            </div>
+            <div id="password">
+                <label>Password</label>
+                <input type="password"/>
+            </div>
+            <button>Đăng nhập</button>
+            <button>Đăng ký</button>
         </div>
-        <div id="password">
-            <label>Password</label>
-            <input type="password"/>
-        </div>
-        <button>Đăng nhập</button>
-        <button>Đăng ký</button>
-    </div>
-    <script src="~/js/jquery/jquery.min.js"></script>
-    <script src="~/js/login.js"></script>
+        <script src="~/js/jquery/jquery.min.js"></script>
+        <script src="~/js/login.js"></script>*@
+    @using (Html.BeginForm("Login", "Account"))
+    {
+        @Html.LabelFor(m => m.LoginName)
+        @Html.TextBoxFor(m => m.LoginName);
+        @Html.LabelFor(m => m.Password);
+        @Html.TextBoxFor(m => m.Password);
+        <input type="submit" value="Login"/>
+    }
+    @*<form method="post" asp-area="Common" asp-controller="Account" asp-action="Login">
+            <div>
+                <label asp-for="LoginName"></label>
+                <input asp-for="LoginName" />
+            </div>
+
+            <div>
+                <label asp-for="Password"></label>
+                <input asp-for="Password" />
+            </div>
+            <input type="submit" value="Login" />
+        </form>*@
 </body>
 </html>

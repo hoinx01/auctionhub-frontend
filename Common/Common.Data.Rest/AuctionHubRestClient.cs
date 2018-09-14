@@ -12,7 +12,7 @@ namespace Common.Data.Rest
     {
         public AuctionHubRestClient()
         {
-            BaseAddress = new Uri(AppSettings.GetString("BackendConfigs.BaseUrl"));
+            BaseAddress = new Uri(AppSettings.GetString("BackendConfigs:BaseUrl"));
             Timeout = TimeSpan.FromSeconds(60);
             MaxResponseContentBufferSize = 10 * 1024 * 1024;
 

@@ -5,12 +5,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Areas\Common\Data\**" />
+    <Content Remove="Areas\Common\Data\**" />
+    <EmbeddedResource Remove="Areas\Common\Data\**" />
+    <None Remove="Areas\Common\Data\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Common\Data\" />
+    <ProjectReference Include="..\Common\Common.Data.Rest\Common.Data.Rest.csproj" />
   </ItemGroup>
 
 </Project>

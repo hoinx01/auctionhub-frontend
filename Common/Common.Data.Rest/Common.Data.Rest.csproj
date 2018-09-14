@@ -5,12 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Caller\" />
+    <ProjectReference Include="..\..\SrvCornet\SrvCornet.Core\SrvCornet.Core.csproj" />
+    <ProjectReference Include="..\..\SrvCornet\SrvCornet.Dal.Rest\SrvCornet.Dal.Rest.csproj" />
+    <ProjectReference Include="..\..\SrvCornet\SrvCornet.Http\SrvCornet.Http.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\SrvCornet\SrvCornet.Core\SrvCornet.Core.csproj" />
-    <ProjectReference Include="..\..\SrvCornet\SrvCornet.Dal.Rest\SrvCornet.Dal.Rest.csproj" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
   </ItemGroup>
 
 </Project>
