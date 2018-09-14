@@ -16,6 +16,10 @@ namespace Application.Web.Areas.Common.Controllers
         {
             return View();
         }
+<<<<<<< HEAD
+        public 
+=======
         public A
+>>>>>>> fa33c8f873c03a6aeca9041d28d298a68fc540a0
     }
 }
